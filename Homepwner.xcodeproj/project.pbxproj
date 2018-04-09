@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990F05441E87F4F2000327BC /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990F05431E87F4F2000327BC /* ItemCell.swift */; };
 		9917A5771E757ADC008CF77B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9917A5761E757ADC008CF77B /* AppDelegate.swift */; };
 		9917A57C1E757ADC008CF77B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9917A57A1E757ADC008CF77B /* Main.storyboard */; };
 		9917A57E1E757ADC008CF77B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9917A57D1E757ADC008CF77B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 		9917A5A51E758B8C008CF77B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9917A5A41E758B8C008CF77B /* Item.swift */; };
 		9917A5A71E75A0A5008CF77B /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9917A5A61E75A0A5008CF77B /* ItemStore.swift */; };
 		9917A5A91E75A32A008CF77B /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9917A5A81E75A32A008CF77B /* ItemsViewController.swift */; };
+		99AF51CB1E8EB4DF00FC8856 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AF51CA1E8EB4DF00FC8856 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		990F05431E87F4F2000327BC /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9917A5731E757ADC008CF77B /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9917A5761E757ADC008CF77B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9917A57B1E757ADC008CF77B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		9917A5A41E758B8C008CF77B /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9917A5A61E75A0A5008CF77B /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		9917A5A81E75A32A008CF77B /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		99AF51CA1E8EB4DF00FC8856 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 				9917A57D1E757ADC008CF77B /* Assets.xcassets */,
 				9917A57F1E757ADC008CF77B /* LaunchScreen.storyboard */,
 				9917A5821E757ADC008CF77B /* Info.plist */,
+				990F05431E87F4F2000327BC /* ItemCell.swift */,
+				99AF51CA1E8EB4DF00FC8856 /* DetailViewController.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -194,7 +200,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Zaid Altahat";
 				TargetAttributes = {
 					9917A5721E757ADC008CF77B = {
@@ -271,7 +277,9 @@
 				9917A5A91E75A32A008CF77B /* ItemsViewController.swift in Sources */,
 				9917A5A51E758B8C008CF77B /* Item.swift in Sources */,
 				9917A5A71E75A0A5008CF77B /* ItemStore.swift in Sources */,
+				99AF51CB1E8EB4DF00FC8856 /* DetailViewController.swift in Sources */,
 				9917A5771E757ADC008CF77B /* AppDelegate.swift in Sources */,
+				990F05441E87F4F2000327BC /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +352,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -394,6 +403,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -522,6 +532,7 @@
 				9917A59D1E757ADD008CF77B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9917A59E1E757ADD008CF77B /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +541,7 @@
 				9917A5A01E757ADD008CF77B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9917A5A11E757ADD008CF77B /* Build configuration list for PBXNativeTarget "HomepwnerUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +550,7 @@
 				9917A5A31E757ADD008CF77B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
