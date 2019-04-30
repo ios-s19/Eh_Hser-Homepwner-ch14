@@ -10,6 +10,8 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
+    
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
@@ -65,7 +67,7 @@ class ItemsViewController: UITableViewController {
         */
         
         //tableView.rowHeight = 65
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
         
     }
@@ -75,7 +77,7 @@ class ItemsViewController: UITableViewController {
         // Create a new item and add it to the store
         let newItem = itemStore.createItem()
         // Figure out where that item is in the array
-        if let index = itemStore.allItems.index(of: newItem) {
+        if let index = itemStore.allItems.firstIndex(of: newItem) {
             let indexPath = IndexPath(row: index, section: 0)
             // Insert this new row into the table
             tableView.insertRows(at: [indexPath], with: .automatic)
@@ -98,7 +100,7 @@ class ItemsViewController: UITableViewController {
     }*/
     
     override func tableView(_ tableView: UITableView,
-                            commit editingStyle: UITableViewCellEditingStyle,
+                            commit editingStyle: UITableViewCell.EditingStyle,
                             forRowAt indexPath: IndexPath) {
         // If the table view is asking to commit a delete command...
         if editingStyle == .delete {
@@ -117,6 +119,7 @@ class ItemsViewController: UITableViewController {
                                              handler: { (action) -> Void in
                                                 // Remove the item from the store
                                                 self.itemStore.removeItem(item)
+                                                self.imageStore.deleteImage(forkey: item.itemKey)
                                                 // Also remove that row from the table view with an animation
                                                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             })
@@ -147,6 +150,7 @@ class ItemsViewController: UITableViewController {
                 let detailViewController
                     = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         default:
             preconditionFailure("Unexpected segue identifier.")
